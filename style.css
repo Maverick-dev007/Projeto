@@ -1,0 +1,357 @@
+:root {
+  --verde: #6c977d;
+  --verde-escuro: #4b6c5b;
+  --bege: #f7f5f2;
+  --cinza: #666;
+  --texto: #222;
+  --branco: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+  background: var(--branco);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--branco);
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--verde-escuro);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde-escuro);
+}
+
+.cta {
+  background: var(--verde);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: var(--verde-escuro);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 5%;
+  background: var(--bege);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-family: "Lora", serif;
+  color: var(--verde-escuro);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  color: var(--cinza);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.hero-text .btn {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* SEÇÃO SOBRE */
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem 5%;
+}
+
+.sobre img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+}
+
+.sobre-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.sobre-text h2 {
+  font-family: "Lora", serif;
+  color: var(--verde-escuro);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-text p {
+  color: var(--cinza);
+  margin-bottom: 1rem;
+}
+
+/* SERVIÇOS */
+.servicos {
+  display: flex;
+  flex-direction: column;
+  background: var(--bege);
+  padding: 4rem 5%;
+}
+
+.servicos h2 {
+  text-align: center;
+  font-family: "Lora", serif;
+  color: var(--verde-escuro);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.servico {
+  background: var(--branco);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.servico:hover {
+  transform: translateY(-5px);
+}
+.servico h3 {
+  color: var(--verde);
+  margin-bottom: 0.5rem;
+}
+.servico p {
+  color: var(--cinza);
+}
+
+/* DEPOIMENTOS */
+.depoimentos-section {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 5%;
+  text-align: center;
+}
+.depoimentos-section h2 {
+  font-family: "Lora", serif;
+  color: var(--verde-escuro);
+  margin-bottom: 2rem;
+}
+
+.depoimentos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.depo-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background: var(--bege);
+  border-radius: 15px;
+  padding: 1.5rem;
+  font-style: italic;
+  color: var(--cinza);
+}
+
+.depo-card strong {
+  display: block;
+  color: var(--verde-escuro);
+  margin-top: 1rem;
+}
+
+/* CONTATO */
+.contato h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--verde);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--verde-escuro);
+}
+
+/* LOCALIZAÇÃO */
+
+.mapa {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.mapa h2 {
+  text-align: center;
+}
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.mapa iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.mapa-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.mapa-info h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 1rem;
+}
+.mapa-info p {
+  color: var(--cinza);
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+.whatsapp img {
+  width: 35px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .cta {
+    display: none;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-text {
+    text-align: center;
+  }
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+  .depoimentos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .mapa-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .mapa-info {
+    text-align: center;
+  }
+}
