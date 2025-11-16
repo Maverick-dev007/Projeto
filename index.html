@@ -19,7 +19,14 @@
   <body>
     <header>
       <div class="logo">Dra. Marina Santos</div>
-      <nav>
+      
+      <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
@@ -157,6 +164,34 @@
       />
     </a>
 
-    <script src="script.js"></script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+
+      const btnHamburger = document.getElementById("btn-hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      // Toggle do menu ao clicar no botão
+      btnHamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        btnHamburger.classList.toggle("active");
+      });
+
+      // Fecha o menu ao clicar em um link
+      const navLinks = navMenu.querySelectorAll("a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          btnHamburger.classList.remove("active");
+        });
+      });
+
+      // Fecha o menu ao clicar fora dele
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest("header")) {
+          navMenu.classList.remove("active");
+          btnHamburger.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
